@@ -8,7 +8,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
+    redirect: "/home"
+  },
+  {
+    path: "/home",
+    name: "home",
     components: {
       defualt: Home,
       headerNav: HeaderNav

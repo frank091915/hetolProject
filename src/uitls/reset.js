@@ -1,7 +1,7 @@
 module.exports = function refreshRem(win) {
   console.log("refreshRem");
   var tid;
-  function refreshRem() {
+  function firstRefreshRem() {
     var designSize = 1920; // 设计图尺寸
     var html = document.documentElement;
     var wW = html.clientWidth; // 窗口宽度
@@ -27,4 +27,5 @@ module.exports = function refreshRem(win) {
     },
     false
   );
+  firstRefreshRem();
 };
