@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .home{
-    font-size: 0.15rem;
-  }
+.home {
+  font-size: 0.15rem;
+}
 </style>

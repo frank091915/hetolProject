@@ -4,8 +4,8 @@ import router from "./router";
 import store from "./store";
 
 // 引入rem计算方法
-import refreshRem from "./uitls/reset"
-refreshRem(window)
+import refreshRem from "./uitls/reset";
+refreshRem(window);
 
 Vue.config.productionTip = false;
 

@@ -4,18 +4,18 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view name='headerNav'></router-view>
-    <router-view name='mainContent'></router-view>
+    <router-view name="headerNav"></router-view>
+    <router-view name="mainContent"></router-view>
     <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  created(){
-    console.log(this.$store)
+  created() {
+    console.log(this.$store);
   }
-}
+};
 </script>
 
 <style lang="scss">
