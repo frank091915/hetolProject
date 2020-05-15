@@ -2,7 +2,11 @@
 <template>
   <div id="swiperWrapper">
     <el-carousel height="635px" direction="vertical" :autoplay="false">
-      <el-carousel-item v-for="item in swiperData" :key="item.key" :class="item.className">
+      <el-carousel-item
+        v-for="item in swiperData"
+        :key="item.key"
+        :class="item.className"
+      >
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -18,11 +22,11 @@ export default {
   data() {
     //这里存放数据
     return {
-        swiperData:[
-            {key:1,className:'homeSwiperFirst'},
-            {key:2,className:'homeSwiperSecond'},
-            {key:3,className:'homeSwiperThird'}
-        ]
+      swiperData: [
+        { key: 1, className: "homeSwiperFirst" },
+        { key: 2, className: "homeSwiperSecond" },
+        { key: 3, className: "homeSwiperThird" }
+      ]
     };
   },
   //监听属性 类似于data概念
@@ -49,23 +53,22 @@ export default {
 #swiperWrapper {
   width: 100%;
 
-  .el-carousel__item{
+  .el-carousel__item {
     height: 635px;
     background-size: 100% 100%;
   }
-  .homeSwiperFirst{
-    background-image : url('../assets/swiperHomeOne.jpg');
+  .homeSwiperFirst {
+    background-image: url("../assets/swiperHomeOne.jpg");
   }
-  .homeSwiperSecond{
-    background-image : url('../assets/swiperHomeSecond.jpg');
+  .homeSwiperSecond {
+    background-image: url("../assets/swiperHomeSecond.jpg");
   }
-  .homeSwiperThird{
-    background-image : url('../assets/swiperHomeThird.jpg');
+  .homeSwiperThird {
+    background-image: url("../assets/swiperHomeThird.jpg");
   }
-  
 }
-#test{
-    height: 200px;
-    background-image :url('../assets/swiperHomeOne.jpg');
+#test {
+  height: 200px;
+  background-image: url("../assets/swiperHomeOne.jpg");
 }
 </style>
