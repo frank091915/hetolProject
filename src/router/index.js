@@ -14,8 +14,8 @@ const routes = [
     path: "/home",
     name: "home",
     components: {
-      defualt: Home,
-      headerNav: HeaderNav
+      mainContent: Home,
+      headerNav: HeaderNav,
     }
   },
   {

@@ -1,5 +1,6 @@
 module.exports = function refreshRem(win) {
   console.log("refreshRem");
+  if(!win) win = window
   var tid;
   function firstRefreshRem() {
     var designSize = 1920; // 设计图尺寸
@@ -8,6 +9,8 @@ module.exports = function refreshRem(win) {
     var rem = (wW * 100) / designSize;
     document.documentElement.style.fontSize = rem + "px";
   }
+
+  firstRefreshRem();
 
   win.addEventListener(
     "resize",
@@ -27,5 +30,5 @@ module.exports = function refreshRem(win) {
     },
     false
   );
-  firstRefreshRem();
+
 };

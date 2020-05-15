@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <router-view name="headerNav"></router-view>
-    <router-view name="mainContent">
-      <router-view name="swiper"></router-view>
+    <router-view name="mainContent" class="mainContent">
     </router-view>
     <router-view />
   </div>
@@ -37,5 +36,9 @@ export default {
       color: #42b983;
     }
   }
+}
+
+.mainContent{
+  margin-top:0.9rem;
 }
 </style>
