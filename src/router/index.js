@@ -15,7 +15,7 @@ const routes = [
     name: "home",
     components: {
       mainContent: Home,
-      headerNav: HeaderNav,
+      headerNav: HeaderNav
     }
   },
   {

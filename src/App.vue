@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <router-view name="headerNav"></router-view>
-    <router-view name="mainContent" class="mainContent">
-    </router-view>
+    <router-view name="mainContent" class="mainContent"> </router-view>
     <router-view />
   </div>
 </template>
@@ -38,7 +37,7 @@ export default {
   }
 }
 
-.mainContent{
-  margin-top:0.9rem;
+.mainContent {
+  margin-top: 0.9rem;
 }
 </style>

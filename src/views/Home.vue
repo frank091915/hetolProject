@@ -9,10 +9,10 @@
 
 <script>
 // @ is an alias to /src
-import Swiper from '@/components/swiper'
+import Swiper from "@/components/swiper";
 export default {
   name: "Home",
-  components:{
+  components: {
     Swiper
   }
 };
@@ -20,6 +20,6 @@ export default {
 
 <style lang="scss">
 .home {
-  font-size: 0.20rem;
+  font-size: 0.2rem;
 }
 </style>
