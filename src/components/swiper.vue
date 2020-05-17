@@ -1,7 +1,7 @@
 <!--  -->
 <template>
   <div id="swiperWrapper">
-    <el-carousel height="635px" direction="vertical" :autoplay="false">
+    <el-carousel height="635px" direction="vertical" :autoplay="true">
       <el-carousel-item
         v-for="item in swiperData"
         :key="item.key"
