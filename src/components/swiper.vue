@@ -1,7 +1,7 @@
 <!--  -->
 <template>
   <div id="swiperWrapper">
-    <el-carousel height="635px" direction="vertical" :autoplay="true">
+    <el-carousel :height="'6.4rem'" direction="vertical" :autoplay="true">
       <el-carousel-item
         v-for="item in swiperData"
         :key="item.key"
@@ -54,7 +54,7 @@ export default {
   width: 100%;
 
   .el-carousel__item {
-    height: 635px;
+    height: 6.4rem;
     background-size: 100% 100%;
   }
   .homeSwiperFirst {

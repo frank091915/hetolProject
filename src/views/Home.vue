@@ -11,6 +11,10 @@
       </div>
       <div class="recommendTip">
       </div>
+      <div class="rcmd-center-wrapper">
+        <img src='../../public/images/rcmd-center-bcImage.jpg' class="rcmd-center-wrapper-image">
+        <p class="rcmd-center-name">7天优品Premium · 深圳科技园店</p>
+      </div>
     </div>
   </div>
 </template>
@@ -56,4 +60,36 @@ export default {
   background-image: url('../../public/images/recommendTip.png');
   background-size: cover;
 }
+
+.rcmd-center-wrapper{
+    width: 12rem;
+    height: 5.3rem;
+    border-radius: .47rem;
+    position: absolute;
+    top: 2.19rem;
+    left: 50%;
+    margin-left: -6.1rem;
+    z-index: 998;
+    // background: url('../../public/images/recommendTip.png') no-repeat;
+    background-size: contain;
+    text-align: center;
+    background-color: #2156AF;
+
+    .rcmd-center-wrapper-image{
+        width: 10.3rem;
+        height: 3.93rem;
+        background: rgba(255, 255, 255, 1) ;
+        // background-image: url('../../public/images/rcmd-center-bcImage.jpg');
+        border: 1px solid rgba(236, 236, 236, 1);
+        border-radius: 10px;
+        display: block;
+        margin: .42rem auto;
+        cursor: pointer;
+    }
+    .rcmd-center-name{
+      font-size: 0.25rem;
+      color: #fff;
+    }
+}
+
 </style>

@@ -43,6 +43,8 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2020;
+  background-color: #fff;
   #mainNav {
     height: 0.9rem;
     line-height: 0.9rem;
