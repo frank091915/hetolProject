@@ -1,7 +1,20 @@
 <template>
   <div class="navHeaderWrapper">
     <div id="mainNav">
-      头部导航
+      <div id="loge"></div>
+      <div id="menuWrapper">
+        <div
+          :class="[
+            'singleMenu',
+            currentPath == item.path ? 'currentSelectedPath' : ''
+          ]"
+          v-for="item in menuList"
+          :key="item.path"
+          @click="navigate(item.path)"
+        >
+          {{ item.title }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -15,14 +28,28 @@ export default {
   components: {},
   data() {
     //这里存放数据
-    return {};
+    return {
+      menuList: [
+        { title: "首页", path: "home" },
+        { title: "酒店论坛", path: "forum" },
+        { title: "联系我们", path: "contact" },
+        { title: "身份证上传", path: "IDCard" },
+        { title: "ai视觉解决方案", path: "solution" }
+      ],
+      currentPath: "home"
+    };
   },
   //监听属性 类似于data概念
   computed: {},
   //监控data中的数据变化
   watch: {},
   //方法集合
-  methods: {},
+  methods: {
+    navigate(path) {
+      console.log(path);
+      this.currentPath = path;
+    }
+  },
   //生命周期 - 创建完成（可以访问当前this实例）
   created() {},
   //生命周期 - 挂载完成（可以访问DOM元素）
@@ -48,10 +75,59 @@ export default {
   #mainNav {
     height: 0.9rem;
     line-height: 0.9rem;
-    background: #ffffcc;
     width: 11rem;
     margin: 0 auto;
     font-size: 0.19rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.12rem;
+    #loge {
+      width: 1.5rem;
+      height: 0.74rem;
+      background: url("../../public/images/hotelLogo.png");
+      background-size: 100% 100%;
+    }
+
+    #menuWrapper {
+      display: inline-flex;
+      min-width: 6rem;
+      height: 100%;
+    }
+
+    #menuWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .singleMenu {
+      display: flex;
+      height: 100%;
+      color: #4e4e4e;
+      cursor: pointer;
+      line-height: 1.1rem;
+      padding: 0 0.1rem;
+    }
+
+    .currentSelectedPath {
+      background: #0b1762;
+      color: white;
+      position: relative;
+    }
+    .currentSelectedPath::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: calc(100% - 0.2rem);
+      margin: 0 auto;
+      background-color: #ffe017;
+      top: 0.3rem;
+      left: 0.1rem;
+    }
   }
 }
 </style>
