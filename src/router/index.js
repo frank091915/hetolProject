@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import HeaderNav from "../components/headerNav.vue";
 import Forum from "../views/forum.vue"
+import AiSolution from "../views/aiSolution.vue"
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,14 @@ const routes = [
     name: "forum",
     components: {
       mainContent: Forum,
+      headerNav: HeaderNav
+    }
+  },
+  {
+    path: "/solution",
+    name: "solution",
+    components: {
+      mainContent: AiSolution,
       headerNav: HeaderNav
     }
   },
