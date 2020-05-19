@@ -31,12 +31,12 @@ export default {
     return {
       menuList: [
         { title: "首页", path: "home" },
+        { title: "AI视觉解决方案", path: "solution" },
         { title: "酒店论坛", path: "forum" },
         { title: "联系我们", path: "contact" },
-        { title: "身份证上传", path: "IDCard" },
-        { title: "ai视觉解决方案", path: "solution" }
+        { title: "注册上传", path: "register" }
       ],
-      currentPath: "home"
+      currentPath: window.sessionStorage.getItem('path') ? window.sessionStorage.getItem('path') : "home"
     };
   },
   //监听属性 类似于data概念
@@ -48,6 +48,8 @@ export default {
     navigate(path) {
       console.log(path);
       this.currentPath = path;
+      window.sessionStorage.setItem('path',path)
+      this.$router.push({path : '/' + path})
     }
   },
   //生命周期 - 创建完成（可以访问当前this实例）
