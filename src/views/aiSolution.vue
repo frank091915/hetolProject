@@ -176,7 +176,7 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
                 width: 100%;
                 height: 100%;
                 background-color: #38332D;
-                opacity: 0.8;
+                opacity: 0.6;
                 z-index: 99;
             }
             .hoverTitleBox{
