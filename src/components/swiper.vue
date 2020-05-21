@@ -60,24 +60,19 @@ export default {
     background-size: 100% 100%;
   }
   .homeSwiperFirst {
-    background-image: url("../../public/images/swiper1.png");
-    background-size: 100% 100%;
+    background-image: url("../../public/images/swiper6.jpg");
   }
   .homeSwiperSecond {
     background-image: url("../../public/images/swiper2.png");
-    background-size: 100% 100%;
   }
   .homeSwiperThird {
     background-image: url("../../public/images/swiper3.png");
-    background-size: 100% 100%;
   }
   .homeSwiperFour {
     background-image: url("../../public/images/swiper4.png");
-    background-size: 100% 100%;
   }
   .homeSwiperFive {
     background-image: url("../../public/images/swiper5.png");
-    background-size: 100% 100%;
   }
 }
 #test {

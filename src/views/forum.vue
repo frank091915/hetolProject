@@ -6,12 +6,12 @@
             <InvestmentService></InvestmentService>
         </div>
         <div class="content">
-            <div class="tab">
+            <div class="tab"  v-if="false">
                 <div :class="['tabItem', activeTab == item.name ? 'activeTab' : '']" v-for='item in tabList' :key="item.name" @click="tabClick(item.name)">
                     <span>{{item.label}}</span>
                 </div>
             </div>
-            <div class="mainDescription">
+            <div class="mainDescription" v-if="false">
                 <div class="decHead">
                     <div class="text">
                         <p class="title">7天酒店</p>
@@ -32,6 +32,7 @@
                     <img src="../../public/images/room3.jpg">
                 </div>
             </div>
+            <ArticleComponent :articles = 'articlesList' ></ArticleComponent>
         </div>
     </div>
 </template>
@@ -41,11 +42,13 @@
 //例如：import 《组件名称》 from '《组件路径》';
 import Swiper from "@/components/swiper";
 import InvestmentService from "@/components/investmentService";
+import ArticleComponent from "@/components/singleArticle"
 export default {
 //import引入的组件需要注入到对象中才能使用
 components: {
     Swiper,
-    InvestmentService
+    InvestmentService,
+    ArticleComponent
 },
 data() {
 //这里存放数据
@@ -54,7 +57,24 @@ return {
         {name:'tab1',label:'7天'},
         {name:'tab2',label:'7天优品'}
     ],
-    activeTab:'tab1'
+    activeTab:'tab1',
+    articlesList:[
+        {   
+            title:'28岁开个减肥贴，记录自己是怎么长这么胖的',
+            main:'今天是母亲节，感谢妈妈把我生的这么好，放纵了一下，去吃了爱吃的鲍鱼鸡和腌牛肉，然后回家蒸了开锅肉丸。',
+            author:'超脆'
+        },
+        {   
+            title:'28岁开个减肥贴，记录自己是怎么长这么胖的',
+            main:'今天是母亲节，感谢妈妈把我生的这么好，放纵了一下，去吃了爱吃的鲍鱼鸡和腌牛肉，然后回家蒸了开锅肉丸。',
+            author:'超脆的'
+        },
+        {   
+            title:'28岁开个减肥贴，记录自己是怎么长这么胖的',
+            main:'今天是母亲节，感谢妈妈把我生的这么好，放纵了一下，去吃了爱吃的鲍鱼鸡和腌牛肉，然后回家蒸了开锅肉丸。',
+            author:'超脆的嘞'
+        },
+    ]
 };
 },
 //监听属性 类似于data概念
