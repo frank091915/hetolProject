@@ -8,7 +8,8 @@
         <div class="registerContent">
             <div class="front singleUpload">
                 <p class="registerTitle">
-                    身份证人像面
+                    <i class="el-icon-user registerIcon"></i>
+                    <span>身份证人像面</span> 
                 </p>
                 <div class="uploadSection">
                     <el-upload
@@ -30,7 +31,8 @@
             </div>
             <div class="back singleUpload">
                 <p class="registerTitle">
-                    身份证国徽面
+                    <i class="el-icon-document-add registerIcon"></i>
+                    <span>身份证国徽面</span>
                 </p>
                 <div class="uploadSection">
                     <el-upload
@@ -134,6 +136,7 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
         padding-top:0.2rem;
         background: #F3F3F3;
         border-radius: 5px;
+        position: relative;
     }
 
     .uploadSection{
@@ -144,6 +147,10 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
         height: .4rem;
         border-bottom: 2px solid white ;
         margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .front{
@@ -171,5 +178,9 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 .registerTitle{
     font-size: .2rem;
     font-weight: 600;
+}
+.registerIcon{
+    font-size: .25rem;
+    margin-right: 10px;
 }
 </style>

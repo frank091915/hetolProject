@@ -25,7 +25,9 @@ export default {
       swiperData: [
         { key: 1, className: "homeSwiperFirst" },
         { key: 2, className: "homeSwiperSecond" },
-        { key: 3, className: "homeSwiperThird" }
+        { key: 3, className: "homeSwiperThird" },
+        { key: 4, className: "homeSwiperFour" },
+        { key: 5, className: "homeSwiperFive" }
       ]
     };
   },
@@ -58,13 +60,24 @@ export default {
     background-size: 100% 100%;
   }
   .homeSwiperFirst {
-    background-image: url("../assets/swiperHomeOne.jpg");
+    background-image: url("../../public/images/swiper1.png");
+    background-size: 100% 100%;
   }
   .homeSwiperSecond {
-    background-image: url("../assets/swiperHomeSecond.jpg");
+    background-image: url("../../public/images/swiper2.png");
+    background-size: 100% 100%;
   }
   .homeSwiperThird {
-    background-image: url("../assets/swiperHomeThird.jpg");
+    background-image: url("../../public/images/swiper3.png");
+    background-size: 100% 100%;
+  }
+  .homeSwiperFour {
+    background-image: url("../../public/images/swiper4.png");
+    background-size: 100% 100%;
+  }
+  .homeSwiperFive {
+    background-image: url("../../public/images/swiper5.png");
+    background-size: 100% 100%;
   }
 }
 #test {
