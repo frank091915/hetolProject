@@ -24,24 +24,70 @@
       <!-- 图片展示区 -->
       <div class="forumImgWrapper">
         <div class="singlePic">
-          <img src="../../public/images/room1.jpg" />
+          <img src="../../public/images/face-key.jpg" />
           <div class="hoverPic">
             <div class="hoverTitle">
               <div class="hoverTitleBox">
-                <p class="singleHoverTitle hoverTitleOne">智能刷脸</p>
-                <p class="singleHoverTitle hoverTitleTwo">智能刷脸</p>
+                <p class="singleHoverTitle hoverTitleOne">Face-key</p>
+                <p class="singleHoverTitle hoverTitleTwo">刷脸入住，无需房卡</p>
               </div>
             </div>
           </div>
         </div>
         <div class="singlePic">
-          <img src="../../public/images/room1.jpg" />
+          <img src="../../public/images/face-eating.png" />
+          <div class="hoverPic">
+            <div class="hoverTitle">
+              <div class="hoverTitleBox">
+                <p class="singleHoverTitle hoverTitleOne">Face-eating</p>
+                <p class="singleHoverTitle hoverTitleTwo">刷脸订餐，无需餐券</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="singlePic">
-          <img src="../../public/images/room1.jpg" />
+          <img src="../../public/images/face-check.png" />
+          <div class="hoverPic">
+            <div class="hoverTitle">
+              <div class="hoverTitleBox">
+                <p class="singleHoverTitle hoverTitleOne">Face-check</p>
+                <p class="singleHoverTitle hoverTitleTwo">刷脸门禁，畅通无阻</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="singlePic">
-          <img src="../../public/images/room1.jpg" />
+          <img src="../../public/images/face-pay.jpg" />
+          <div class="hoverPic">
+            <div class="hoverTitle">
+              <div class="hoverTitleBox">
+                <p class="singleHoverTitle hoverTitleOne">Face-pay</p>
+                <p class="singleHoverTitle hoverTitleTwo">刷脸消费，一次付清</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="singlePic">
+          <img src="../../public/images/face-sports.jpg" />
+          <div class="hoverPic">
+            <div class="hoverTitle">
+              <div class="hoverTitleBox">
+                <p class="singleHoverTitle hoverTitleOne">Face-sports</p>
+                <p class="singleHoverTitle hoverTitleTwo">刷脸运动，安排一切</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="more">
+          <div class="hoverPic">
+            <div class="hoverTitle">
+              <div class="hoverTitleBox">
+                <p class="singleHoverTitle hoverTitleOne">更多功能</p>
+                <p class="singleHoverTitle hoverTitleTwo">敬请期待</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,9 +162,10 @@ export default {
   flex-wrap: wrap;
 
   .singlePic {
-    width: 3.86rem;
-    height: 2.56rem;
+    width: 5.86rem;
+    height: 3.56rem;
     position: relative;
+    margin-bottom: 10px;
 
     img {
       width: 100%;
@@ -175,4 +222,45 @@ export default {
     }
   }
 }
+
+  .more {
+    width: 5.86rem;
+    height: 3.56rem;
+    position: relative;
+    margin-bottom: 10px;
+
+    .hoverPic {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #e6e6e6;
+      top: 0;
+      left: 0;
+
+      .hoverTitle {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .hoverTitleBox {
+
+        .singleHoverTitle {
+          width: 100%;
+          color: rgb(104, 96, 96);
+          font-size: 0.18rem;
+          margin: 0;
+        }
+
+        .hoverTitleOne {
+          font-weight: 600;
+          font-size: 0.21rem;
+          margin-bottom: 0.1rem;
+        }
+      }
+    }
+  }
 </style>

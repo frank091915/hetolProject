@@ -153,6 +153,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: #4e4e4e;
   }
 
   .front {
