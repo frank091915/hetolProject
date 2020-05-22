@@ -10,7 +10,7 @@
         ]"
       >
         <div class="title">
-          <span>{{ item.title }}</span>
+          <span @click="reload">{{ item.title }}</span>
           <div class="commentWrapper">
             <a-icon type="user" class="commentorIcon" />
             <div class="commentorName">{{ item.author }}</div>
@@ -146,6 +146,9 @@ export default {
       } else {
         return "隐藏评论";
       }
+    },
+    reload() {
+      this.$router.go();
     }
   },
   //生命周期 - 创建完成（可以访问当前this实例）
@@ -192,6 +195,11 @@ export default {
     position: relative;
     font-weight: 600;
 
+    span:hover {
+      border-bottom: 1px solid #2d64b3;
+      cursor: pointer;
+    }
+
     .commentWrapper {
       font-size: 0.12rem;
       position: absolute;
@@ -230,7 +238,9 @@ export default {
     // opacity: 0;
     position: absolute;
     right: 0.1rem;
-    top: 0.1rem;
+    top: -0.06rem;
+    width: 0.75rem !important;
+    height: 0.22rem !important;
   }
 
   // &:hover{
