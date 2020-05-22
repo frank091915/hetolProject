@@ -241,6 +241,12 @@ export default {
     top: -0.06rem;
     width: 0.75rem !important;
     height: 0.22rem !important;
+    
+      span{
+        font-size: .14rem;
+        line-height: .22rem;
+        display: block;
+      }
   }
 
   // &:hover{
