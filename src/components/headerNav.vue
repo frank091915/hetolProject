@@ -36,7 +36,9 @@ export default {
         { title: "联系我们", path: "contact" },
         { title: "注册上传", path: "register" }
       ],
-      currentPath: window.sessionStorage.getItem('path') ? window.sessionStorage.getItem('path') : "home"
+      currentPath: window.sessionStorage.getItem("path")
+        ? window.sessionStorage.getItem("path")
+        : "home"
     };
   },
   //监听属性 类似于data概念
@@ -48,8 +50,8 @@ export default {
     navigate(path) {
       console.log(path);
       this.currentPath = path;
-      window.sessionStorage.setItem('path',path)
-      this.$router.push({path : '/' + path})
+      window.sessionStorage.setItem("path", path);
+      this.$router.push({ path: "/" + path });
     }
   },
   //生命周期 - 创建完成（可以访问当前this实例）
@@ -86,9 +88,9 @@ export default {
     align-items: center;
     margin-bottom: 0.12rem;
     #loge {
-      width: 1.5rem;
-      height: 0.74rem;
-      background: url("../../public/images/hotelLogo.png");
+      width: 1rem;
+      height: 1rem;
+      background: url("../../public/images/logo.jpg");
       background-size: 100% 100%;
     }
 
