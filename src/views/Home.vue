@@ -11,17 +11,17 @@
       <div class="recommendTip"></div>
       <div class="rcmd-center-wrapper">
         <img
-          src="../../public/images/rcmd-center-bcImage.jpg"
+          src="../../public/images/center-Bc.png"
           class="rcmd-center-wrapper-image"
         />
-        <p class="rcmd-center-name">7天优品Premium · 深圳科技园店</p>
+        <p class="rcmd-center-name">Fashare·AI智能酒店</p>
       </div>
       <div class="picAndInstructionBlock">
         <div class="blockOne block">
           <div class="left">
             <div class="icon iconOne">
               <div class="whiteStripe"></div>
-              <p class="iconDesciption">7Days</p>
+              <p class="iconDesciption">Fashare</p>
             </div>
             <div class="description">
               <div class="title">
@@ -56,30 +56,30 @@
             <div class="icon iconOne">
               <div class="whiteStripe"></div>
               <div class="whiteStripe"></div>
-              <p class="iconDesciption">7Days</p>
+              <p class="iconDesciption">Fashare</p>
             </div>
             <div class="description">
               <div class="title">
-                <p class="singleTitle">所有的坚持</p>
-                <p class="singleTitle">都只为一个梦</p>
+                <p class="singleTitle">每一次的旅程</p>
+                <p class="singleTitle">留下你独特的回忆</p>
               </div>
               <div class="features">
                 <div class="singleFeature block-one">
-                  <span class="singleFeatureOne">星级优眠床垫</span>
-                  <div class="singleFeatureIcon icon-one"></div>
+                  <span class="singleFeatureOne">智慧自助餐厅</span>
+                  <!-- <div class="singleFeatureIcon icon-one"></div> -->
                 </div>
                 <div class="singleFeature block-one">
-                  <span class="singleFeatureOne">洁净封包洗具</span>
-                  <div class="singleFeatureIcon icon-two"></div>
+                  <span class="singleFeatureOne">共享健身房</span>
+                  <!-- <div class="singleFeatureIcon icon-two"></div> -->
                 </div>
                 <div class="singleFeature block-one">
-                  <span class="singleFeatureOne">开放WIFI</span>
-                  <div class="singleFeatureIcon icon-three"></div>
+                  <span class="singleFeatureOne">豪华室内游泳池</span>
+                  <!-- <div class="singleFeatureIcon icon-three"></div> -->
                 </div>
-                <div class="singleFeature block-one">
+                <!-- <div class="singleFeature block-one">
                   <span class="singleFeatureOne">速热10秒淋浴</span>
                   <div class="singleFeatureIcon icon-four"></div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -268,7 +268,7 @@ export default {
       width: 50%;
       height: 100%;
       float: right;
-      background: url("../../public/images/block-one-rightBc.jpg");
+      background: url("../../public/images/home-page-leftBc.png");
       background-size: 100% 100%;
       background-repeat: no-repeat;
     }
@@ -353,7 +353,7 @@ export default {
       width: 50%;
       height: 100%;
       float: left;
-      background: url("../../public/images/block-two-leftBc.jpg");
+      background: url("../../public/images/left-cilped.jpg");
       background-size: 100% 100%;
       background-repeat: no-repeat;
     }

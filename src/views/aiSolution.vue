@@ -11,13 +11,13 @@
         <h3 class="content-head-title">
           <span>随心所欲</span>
           <span>自由组合</span>
-          <span>一键调控</span>
+          <span>一“脸”调控</span>
         </h3>
         <div class="content-head-paragraph">
           <p>
-            场景面板采用OLED显示，提供多种场景选择，可以通过UIOT超级智慧家APP与场景面板双向通讯，在千里之外随心调控设备。
+            酒店场景结合虹软人脸识别，提供多种灵活选择，让用户在酒店里刷“脸”体验所有场景
             <br />
-            用户可以根据自身需要和生活习惯，配置相应的场景，满足高端定制需求
+            配合相应的app能够让用户自我定制自身需要和生活习惯
           </p>
         </div>
       </div>
@@ -133,7 +133,7 @@ export default {
 .content-head-title {
   background-color: white;
   margin: 10px auto;
-  width: 4rem;
+  width: 4.2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
