@@ -6,6 +6,7 @@ import HeaderNav from "../components/headerNav.vue";
 import Forum from "../views/forum.vue";
 import AiSolution from "../views/aiSolution.vue";
 import Register from "../views/register.vue";
+import ContactUs from "../views/contactUs";
 
 Vue.use(VueRouter);
 
@@ -52,6 +53,14 @@ const routes = [
     name: "register",
     components: {
       mainContent: Register,
+      headerNav: HeaderNav
+    }
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    components: {
+      mainContent: ContactUs,
       headerNav: HeaderNav
     }
   }
