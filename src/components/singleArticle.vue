@@ -1,6 +1,10 @@
 <template>
   <div class="articleWrapper">
-    <div class="singleArticle" v-for="item in articles" :key="item.author">
+    <div
+      class="singleArticle"
+      v-for="(item, index) in articles"
+      :key="item.author"
+    >
       <!-- {{ +   + item.author}} -->
 
       <div
@@ -34,16 +38,11 @@
           <div class="commentBody">
             <a-list item-layout="horizontal" :data-source="data">
               <a-list-item slot="renderItem" slot-scope="item">
-                <a-list-item-meta
-                  description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                >
-                  <a slot="title" href="https://www.antdv.com/">{{
+                <a-list-item-meta :description="textFormat(item, index)">
+                  <a v-if="false" slot="title" href="https://www.antdv.com/">{{
                     item.title
                   }}</a>
-                  <a-avatar
-                    slot="avatar"
-                    src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                  />
+                  <a-avatar slot="avatar" size="small" icon="user" />
                 </a-list-item-meta>
               </a-list-item>
             </a-list>
@@ -83,16 +82,16 @@
 //例如：import 《组件名称》 from '《组件路径》';
 const data = [
   {
-    title: "Ant Design Title 1"
+    title: 1
   },
   {
-    title: "Ant Design Title 2"
+    title: 2
   },
   {
-    title: "Ant Design Title 3"
+    title: 3
   },
   {
-    title: "Ant Design Title 4"
+    title: 4
   }
 ];
 export default {
@@ -103,6 +102,12 @@ export default {
       default: function() {
         return [];
       }
+    },
+    articleIndex: {
+      type: Number,
+      default: function() {
+        return 1;
+      }
     }
   },
   components: {},
@@ -112,7 +117,25 @@ export default {
       text: `A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.`,
       activeKey: [],
       selectedComment: [],
-      data
+      data,
+      textObjectOne: {
+        1: "很干净环境很好、床也很舒服、卫生间也很干净宽敞、房子的装修风格很漂亮、有惊喜到、前台小姐姐更是服务周到！",
+        2: "相当不错的酒店，适合多家居住，每家都有独立的空间！",
+        3: "房间温暖舒适，冬日郊游强烈推荐。早餐丰盛营养均衡。",
+        4: "服务真的很贴心，服务细致入微，就像到家的感觉"
+      },
+      textObjectTwo: {
+        1: "#卫生##安全##风格特色##服务#服务周到 房间设施齐全",
+        2: "服务很好。 【适合年轻人】",
+        3: "酒店很有特色",
+        4: "酒店设计很前卫,值得入住"
+      },
+      textObjectThree: {
+        1: "设施环境都五星",
+        2: "很喜欢酒店的设计，房间温暖舒适",
+        3: "酒店的工作人员服务态度很好，房间也很多干净",
+        4: "家的延伸，而不是外面酒店的感觉"
+      }
     };
   },
   //监听属性 类似于data概念
@@ -121,16 +144,19 @@ export default {
   watch: {},
   //方法集合
   methods: {
+    textFormat(item, index) {
+      if (index == 0) {
+        return this.textObjectOne[item.title];
+      } else if (index == 1) {
+        return this.textObjectTwo[item.title];
+      } else {
+        return this.textObjectThree[item.title];
+      }
+    },
     changeActivekey(key) {
       console.log(key);
     },
     toggle(key) {
-      console.log(
-        key,
-        "selectedComment",
-        this.selectedComment,
-        this.selectedComment.indexOf(key)
-      );
       if (this.selectedComment.indexOf(key) == -1) {
         this.selectedComment.push(key);
       } else {
@@ -176,6 +202,10 @@ export default {
   .ant-collapse > .ant-collapse-item {
     border: none !important;
   }
+}
+
+.singleArticle:nth-child(1) {
+  border-top: 1px solid #e6e6e6;
 }
 
 .singleArticle {
@@ -241,12 +271,12 @@ export default {
     top: -0.06rem;
     width: 0.75rem !important;
     height: 0.22rem !important;
-    
-      span{
-        font-size: .14rem;
-        line-height: .22rem;
-        display: block;
-      }
+
+    span {
+      font-size: 0.14rem;
+      line-height: 0.22rem;
+      display: block;
+    }
   }
 
   // &:hover{
@@ -278,5 +308,11 @@ export default {
       margin-top: 5px;
     }
   }
+}
+.ant-list-item-meta-description {
+  text-align: left;
+}
+.ant-list-item-meta {
+  padding-left: 0.1rem;
 }
 </style>

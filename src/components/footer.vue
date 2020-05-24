@@ -1,6 +1,11 @@
+<!--  -->
 <template>
   <div class="">
-    <div v-if="false" class="fw-img"></div>
+    <div class="footerWrapper">
+      <p class="text">
+        Fashare酒店（XX）有限公司版权所有 ©2005-2020 XICP备 XXXXXXXX 号
+      </p>
+    </div>
   </div>
 </template>
 
@@ -34,15 +39,16 @@ export default {
   activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 };
 </script>
-<style scoped>
-.fw-img {
-  position: fixed;
-  right: 20px;
-  top: 50%;
-  width: 2.16rem;
-  height: 2.18rem;
-  z-index: 999;
-  background-image: url("../../public/images/fw.png");
-  background-size: cover;
+<style scoped lang="scss">
+.footerWrapper {
+  margin-top: 0.2rem;
+
+  .text {
+    // height: 1.4rem;
+    font-size: 0.21rem;
+    color: #4e4e4e;
+    text-align: center;
+    font-family: SourceHanSansCN;
+  }
 }
 </style>

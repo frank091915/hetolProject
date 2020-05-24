@@ -55,6 +55,7 @@
         </div>
       </div>
     </div>
+    <hotelFooter />
   </div>
 </template>
 
@@ -63,11 +64,13 @@
 //例如：import 《组件名称》 from '《组件路径》';
 import Swiper from "@/components/swiper";
 import InvestmentService from "@/components/investmentService";
+import hotelFooter from "@/components/footer";
 export default {
   //import引入的组件需要注入到对象中才能使用
   components: {
     Swiper,
-    InvestmentService
+    InvestmentService,
+    hotelFooter
   },
   data() {
     //这里存放数据
@@ -159,6 +162,10 @@ export default {
   .front {
     border-bottom: 1px solid white;
     margin: 0.2rem auto;
+  }
+
+  .back {
+    margin-bottom: 0.2rem;
   }
 
   .el-upload-list--picture-card .el-upload-list__item {

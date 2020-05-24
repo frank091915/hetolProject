@@ -91,6 +91,7 @@
         </div>
       </div>
     </div>
+    <hotelFooter />
   </div>
 </template>
 
@@ -99,11 +100,13 @@
 //例如：import 《组件名称》 from '《组件路径》';
 import Swiper from "@/components/swiper";
 import InvestmentService from "@/components/investmentService";
+import hotelFooter from "@/components/footer";
 export default {
   //import引入的组件需要注入到对象中才能使用
   components: {
     Swiper,
-    InvestmentService
+    InvestmentService,
+    hotelFooter
   },
   data() {
     //这里存放数据
@@ -153,7 +156,7 @@ export default {
 
 .forumImgWrapper {
   width: 12rem;
-  height: 5.4rem;
+  min-height: 5.4rem;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -223,44 +226,43 @@ export default {
   }
 }
 
-  .more {
-    width: 5.86rem;
-    height: 3.56rem;
-    position: relative;
-    margin-bottom: 10px;
+.more {
+  width: 5.86rem;
+  height: 3.56rem;
+  position: relative;
+  margin-bottom: 10px;
 
-    .hoverPic {
-      position: absolute;
+  .hoverPic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e6e6e6;
+    top: 0;
+    left: 0;
+
+    .hoverTitle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100%;
-      border: 1px solid #e6e6e6;
-      top: 0;
-      left: 0;
+    }
 
-      .hoverTitle {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    .hoverTitleBox {
+      .singleHoverTitle {
         width: 100%;
-        height: 100%;
+        color: rgb(104, 96, 96);
+        font-size: 0.18rem;
+        margin: 0;
       }
 
-      .hoverTitleBox {
-
-        .singleHoverTitle {
-          width: 100%;
-          color: rgb(104, 96, 96);
-          font-size: 0.18rem;
-          margin: 0;
-        }
-
-        .hoverTitleOne {
-          font-weight: 600;
-          font-size: 0.21rem;
-          margin-bottom: 0.1rem;
-        }
+      .hoverTitleOne {
+        font-weight: 600;
+        font-size: 0.21rem;
+        margin-bottom: 0.1rem;
       }
     }
   }
+}
 </style>

@@ -86,6 +86,7 @@
         </div>
       </div>
     </div>
+    <hotelFooter></hotelFooter>
   </div>
 </template>
 
@@ -93,11 +94,13 @@
 // @ is an alias to /src
 import Swiper from "@/components/swiper";
 import InvestmentService from "@/components/investmentService";
+import hotelFooter from "@/components/footer";
 export default {
   name: "Home",
   components: {
     Swiper,
-    InvestmentService
+    InvestmentService,
+    hotelFooter
   }
 };
 </script>

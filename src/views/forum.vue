@@ -100,6 +100,7 @@
       </div>
       <ArticleComponent :articles="articlesList"></ArticleComponent>
     </div>
+    <hotelFooter />
   </div>
 </template>
 
@@ -109,12 +110,14 @@
 import Swiper from "@/components/swiper";
 import InvestmentService from "@/components/investmentService";
 import ArticleComponent from "@/components/singleArticle";
+import hotelFooter from "@/components/footer";
 export default {
   //import引入的组件需要注入到对象中才能使用
   components: {
     Swiper,
     InvestmentService,
-    ArticleComponent
+    ArticleComponent,
+    hotelFooter
   },
   data() {
     //这里存放数据
@@ -126,24 +129,23 @@ export default {
       activeTab: "tab1",
       articlesList: [
         {
-          title: "28岁开个减肥贴，记录自己是怎么长这么胖的",
-          main:
-            "今天是母亲节，感谢妈妈把我生的这么好，放纵了一下，去吃了爱吃的鲍鱼鸡和腌牛肉，然后回家蒸了开锅肉丸。",
-          author: "超脆",
+          title: "酒店环境很好",
+          main: "#有设计感  #锁链不错  #环境太棒  #景色迷人  #总体感觉不错  ",
+          author: "oafk8177",
           key: "1"
         },
         {
-          title: "28岁开个减肥贴，记录自己是怎么长这么胖的",
+          title: "酒店不错,服务很好,前台很热情",
           main:
-            "今天是母亲节，感谢妈妈把我生的这么好，放纵了一下，去吃了爱吃的鲍鱼鸡和腌牛肉，然后回家蒸了开锅肉丸。",
-          author: "超脆的",
+            "风景优美，酒店不错，服务很好，前台很热情。设施齐全，房间也很整洁，比较新，总体感觉非常不错。吃的也不错。",
+          author: "匿名用户",
           key: "2"
         },
         {
-          title: "28岁开个减肥贴，记录自己是怎么长这么胖的",
+          title: "环境很好,酒店设计很用心",
           main:
-            "今天是母亲节，感谢妈妈把我生的这么好，放纵了一下，去吃了爱吃的鲍鱼鸡和腌牛肉，然后回家蒸了开锅肉丸。",
-          author: "超脆的嘞",
+            "环境很好，酒店设计很用心，可惜第二天遇到下雨没去成马场。大使于金凤很贴心，全程服务很棒，有求必应，赞！",
+          author: "我是鸟人",
           key: "3"
         }
       ]
